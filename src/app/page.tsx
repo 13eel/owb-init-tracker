@@ -1,4 +1,4 @@
-import "./client"
+import { ClientCode } from "~/app/components/ClientCode";
 
 export default function HomePage() {
   return (
@@ -8,6 +8,7 @@ export default function HomePage() {
           Initiative <span className="text-[hsl(280,100%,70%)]">Tracker</span>
         </h1>
       </div>
+      <ClientCode/>
     </main>
   );
 }
