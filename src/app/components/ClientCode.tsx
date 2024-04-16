@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import OBR from"@owlbear-rodeo/sdk"
+import OBR from "@owlbear-rodeo/sdk";
 import { useEffect } from "react";
-import { setupContextMenu } from "~/utils/contextMenu"
+import { setupContextMenu } from "~/utils/contextMenu";
 
-export function ClientCode() {
-    useEffect(()=>
-        OBR.onReady(()=>{
-            setupContextMenu().catch(console.error)
-        })
-    ,[])
-    return null
+export default function ClientCode() {
+  useEffect(() => {
+    const cleanup = OBR.onReady(() => {
+      setupContextMenu().catch(console.error);
+    });
+    return cleanup;
+  }, []);
+  return null;
 }

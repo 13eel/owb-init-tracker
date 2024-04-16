@@ -1,4 +1,6 @@
-import { ClientCode } from "~/app/components/ClientCode";
+import dynamic from "next/dynamic";
+
+const ClientCode = dynamic(() => import("./components/ClientCode"), {ssr: false});
 
 export default function HomePage() {
   return (
