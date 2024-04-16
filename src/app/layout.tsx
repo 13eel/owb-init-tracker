@@ -1,11 +1,17 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
+import OBR from"@owlbear-rodeo/sdk"
+import { setupContextMenu } from "~/utils/contextMenu";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
+OBR.onReady(()=>{
+  setupContextMenu().catch(console.error)
+})
 
 export const metadata = {
   title: "Create T3 App",
