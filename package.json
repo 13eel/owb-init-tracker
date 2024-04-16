@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@owlbear-rodeo/sdk": "^2.3.0",
     "@t3-oss/env-nextjs": "^0.9.2",
     "next": "^14.2.1",
     "react": "18.2.0",
